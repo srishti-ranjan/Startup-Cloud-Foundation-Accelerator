@@ -44,3 +44,11 @@ jobs:
       - name: Terraform Apply (Staging)
         run: terraform apply -auto-approve -var-file="staging.tfvars"
 
+- name: Wait for service to stabilize
+        run: sleep 30
+
+      - name: Health Check
+        run: |
+          URL=$(terraform output -raw alb_dns_name)
+          echo "Checking $URL"
+          curl -f http://$URL/health
