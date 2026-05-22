@@ -10,6 +10,10 @@ jobs:
     name: Terraform Dev Deploy
     runs-on: ubuntu-latest
 
+    defaults:
+      run:
+        working-directory: scfa-terraform  
+
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
@@ -27,7 +31,7 @@ jobs:
       - name: Terraform Init
         run: |
           terraform init \
-            -backend-config="key=scfa/dev/terraform.tfstate"
+            -backend-config="key=dev/terraform.tfstate"
 
       - name: Terraform Validate
         run: terraform validate
@@ -37,4 +41,3 @@ jobs:
 
       - name: Terraform Apply
         run: terraform apply -auto-approve -var-file="dev.tfvars"
-
