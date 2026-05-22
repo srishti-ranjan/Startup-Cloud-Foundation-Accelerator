@@ -32,7 +32,8 @@ jobs:
       - name: Terraform Init (Staging)
         run: |
           terraform init \
-            -backend-config="key=dev/terraform.tfstate"  
+            -backend-config="key=scfa/staging/terraform.tfstate"
+  
 
       - name: Terraform Validate
         run: terraform validate
