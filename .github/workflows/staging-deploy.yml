@@ -1,3 +1,11 @@
+name: Staging Deployment
+
+on:
+  push:
+    branches:
+      - dev
+  workflow_dispatch:
+
 jobs:
   terraform:
     name: Terraform Staging Deploy
@@ -40,6 +48,6 @@ jobs:
 
       - name: Health Check
         run: |
-          URL=$(terraform output -raw alb_dns_name)
-          echo "Checking $URL"
-          curl -f "http://$URL/health"
+          sleep 5
+          curl -f http://$(terraform output -raw alb_dns_name)/health
+
