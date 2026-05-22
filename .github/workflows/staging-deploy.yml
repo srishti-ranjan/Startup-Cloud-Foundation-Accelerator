@@ -51,4 +51,5 @@ jobs:
         run: |
           URL=$(terraform output -raw alb_dns_name)
           echo "Checking $URL"
-          curl -f http://$URL/health
+          curl -f "http://$URL/health"
+
