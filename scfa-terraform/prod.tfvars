@@ -23,7 +23,7 @@ ecs_container_name  = "scfa-dev-app"
 ecs_container_port  = 8000
 
 ecs_cpu    = "1024"
-ecs_memory = "1024"
+ecs_memory = "2048"
 
 ecs_image = "097639379017.dkr.ecr.us-east-1.amazonaws.com/scfa-dev-app:latest"
 
