@@ -1,15 +1,16 @@
+
 environment = "prod"
 
 vpc_id = "vpc-060fcaaa88c03157c"
 
 public_subnet_ids = [
-  "subnet-XXXXXXX",
-  "subnet-XXXXXXX"
+  "subnet-035a94edb9d8e8a3d",
+  "subnet-0edae7ceaea0b596d"
 ]
 
 private_subnet_ids = [
-  "subnet-XXXXXXX",
-  "subnet-XXXXXXX"
+  "subnet-0bb3cde061b00cfbd",
+  "subnet-0f88d824890e64c11"
 ]
 
 alb_name = "scfa-prod-alb"
@@ -21,7 +22,7 @@ ecs_task_family     = "scfa-prod-task"
 ecs_container_name  = "scfa-dev-app"
 ecs_container_port  = 8000
 
-ecs_cpu    = "512"
+ecs_cpu    = "1024"
 ecs_memory = "1024"
 
 ecs_image = "097639379017.dkr.ecr.us-east-1.amazonaws.com/scfa-dev-app:latest"
