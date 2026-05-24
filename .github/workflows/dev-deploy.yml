@@ -1,9 +1,13 @@
 name: Dev Deployment
 
 on:
-  push:
-    branches:
-      - dev
+  workflow_dispatch:
+
+
+concurrency:
+  group: terraform-dev
+  cancel-in-progress: false
+
 
 jobs:
   terraform:
