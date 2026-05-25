@@ -51,4 +51,6 @@ module "ecs" {
   ecs_memory               = var.ecs_memory
   ecs_image                = var.ecs_image
   task_execution_role_arn  = var.task_execution_role_arn
+  min_capacity = var.min_capacity
+  max_capacity = var.max_capacity
 }

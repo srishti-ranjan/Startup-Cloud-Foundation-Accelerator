@@ -59,3 +59,13 @@ variable "ecs_image" {
 variable "task_execution_role_arn" {
   type = string
 }
+
+variable "min_capacity" {
+  type    = number
+  default = 1
+}
+
+variable "max_capacity" {
+  type    = number
+  default = 3
+}

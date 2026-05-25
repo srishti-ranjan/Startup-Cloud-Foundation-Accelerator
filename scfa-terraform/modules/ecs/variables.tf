@@ -49,3 +49,13 @@ variable "ecs_security_group_id" {
 variable "target_group_arn" {
   type = string
 }
+
+variable "min_capacity" {
+  type = number
+  default = 1
+}
+
+variable "max_capacity" {
+  type = number
+  default = 3
+}

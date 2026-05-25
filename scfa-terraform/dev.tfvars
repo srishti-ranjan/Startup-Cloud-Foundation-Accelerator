@@ -28,3 +28,5 @@ ecs_image = "097639379017.dkr.ecr.us-east-1.amazonaws.com/scfa-dev-app:latest"
 
 task_execution_role_arn = "arn:aws:iam::097639379017:role/ecsTaskExecutionRole"
 
+min_capacity = 1
+max_capacity = 2

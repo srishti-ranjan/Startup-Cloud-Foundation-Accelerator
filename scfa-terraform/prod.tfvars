@@ -13,6 +13,10 @@ private_subnet_ids = [
   "subnet-0f88d824890e64c11"
 ]
 
+min_capacity = 2
+max_capacity = 5
+
+
 alb_name = "scfa-prod-alb"
 
 ecs_cluster_name = "scfa-prod-cluster"
